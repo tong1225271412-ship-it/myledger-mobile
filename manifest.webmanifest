@@ -1,16 +1,26 @@
 {
-  "name": "MyLedger · 个人记账本",
-  "short_name": "MyLedger",
-  "description": "离线优先的个人记账本，支持 Firebase 云同步和本地账单备份",
+  "name": "VASCONTA · 瓦斯科的账本",
+  "short_name": "VASCONTA",
+  "description": "VASCONTA · 瓦斯科的账本。离线记账、跨设备云同步与财务分析。",
   "id": "./",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f3f7ff",
-  "theme_color": "#0b3c8a",
+  "background_color": "#071A35",
+  "theme_color": "#071A35",
   "lang": "zh-CN",
   "icons": [
-    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any maskable"},
-    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any maskable"}
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
   ]
 }

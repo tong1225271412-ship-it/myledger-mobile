@@ -1,5 +1,6 @@
-const CACHE = 'myledger-mobile-v0151';
-const ASSETS = ['./','./index.html','./style.css?v=0.1.5','./splash.css?v=0.1.5.1','./splash.js?v=0.1.5.1','./app.js?v=0.1.5','./cloud.js?v=0.1.5','./analytics.js?v=0.1.5','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png','./icons/icon-180.png'];
-self.addEventListener('install',event=>{ event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting())); });
-self.addEventListener('activate',event=>{ event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('myledger-mobile-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())); });
-self.addEventListener('fetch',event=>{ if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return; event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy)).catch(()=>{});}return response;}).catch(()=>caches.match(event.request))); });
+/* VASCONTA v0.1.6 - preserve origin, storage and installed app identity */
+const CACHE='myledger-mobile-vasconta-v016';
+const ASSETS=['./','./index.html','./style.css?v=0.1.5','./splash.css?v=0.1.6','./splash.js?v=0.1.6','./app.js?v=0.1.5','./cloud.js?v=0.1.5','./analytics.js?v=0.1.5','./manifest.webmanifest','./assets/vasconta-splash.webp','./icons/icon-192.png','./icons/icon-512.png','./icons/icon-180.png'];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('myledger-mobile-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET'||new URL(event.request.url).origin!==self.location.origin)return;event.respondWith(fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE).then(cache=>cache.put(event.request,copy)).catch(()=>{});}return response;}).catch(()=>caches.match(event.request)));});

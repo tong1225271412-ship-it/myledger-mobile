@@ -3,52 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#0b3c8a">
+  <meta name="theme-color" content="#071A35">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="MyLedger">
-  <meta name="description" content="离线优先的记账应用，支持 Firebase 云端同步与本地 CSV 备份">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VASCONTA">
+  <meta name="description" content="VASCONTA · 瓦斯科的账本，支持离线记账、财务分析和 Firebase 云端同步">
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./icons/icon-180.png">
   <link rel="icon" href="./icons/icon-192.png">
   <link rel="stylesheet" href="./style.css?v=0.1.5">
-  <link rel="stylesheet" href="./splash.css?v=0.1.5.1">
-  <title>MyLedger · 个人记账本 V0.1.5.1</title>
+  <link rel="stylesheet" href="./splash.css?v=0.1.6">
+  <title>VASCONTA · 瓦斯科的账本 V0.1.6</title>
 </head>
 <body>
-  <!-- MyLedger splash: visual overlay only; no effect on local accounting or Firebase sync. -->
-  <div id="myledgerSplash" class="ml-splash" role="dialog" aria-modal="true" aria-label="MyLedger 启动动画">
-    <div class="ml-splash__ambient ml-splash__ambient--left" aria-hidden="true"></div>
-    <div class="ml-splash__ambient ml-splash__ambient--right" aria-hidden="true"></div>
-    <div class="ml-splash__stars" aria-hidden="true">
-      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  <!-- VASCONTA V0.1.6: cinematic visual-only overlay. Real ledger / Firebase remain unchanged. -->
+  <div id="vascontaSplash" class="vas-splash" role="dialog" aria-modal="true" aria-label="VASCONTA 启动动画">
+    <div class="vas-splash__background" aria-hidden="true"></div>
+    <div class="vas-splash__aura vas-splash__aura--blue" aria-hidden="true"></div>
+    <div class="vas-splash__aura vas-splash__aura--teal" aria-hidden="true"></div>
+    <div class="vas-splash__artwork">
+      <img src="./assets/vasconta-splash.webp" alt="VASCONTA · 瓦斯科的账本 · 每一笔，都算数。" width="941" height="1672" fetchpriority="high">
+      <span class="vas-splash__beam" aria-hidden="true"></span>
     </div>
-    <svg class="ml-splash__waves" viewBox="0 0 420 840" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-      <defs>
-        <linearGradient id="mlSplashLine" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#126fee"/><stop offset="48%" stop-color="#38ccff"/><stop offset="100%" stop-color="#13f1c9"/></linearGradient>
-        <linearGradient id="mlSplashWave" x1="0" x2="1" y1="0" y2="0"><stop offset="0%" stop-color="#0a50b4" stop-opacity="0.02"/><stop offset="48%" stop-color="#00cfff" stop-opacity=".21"/><stop offset="100%" stop-color="#22ebbd" stop-opacity=".30"/></linearGradient>
-      </defs>
-      <path class="ml-splash__wave-fill" d="M-90 570 C0 445 83 630 183 558 S340 439 510 535 L510 840 L-90 840 Z" fill="url(#mlSplashWave)"/>
-      <path class="ml-splash__wave-back" d="M-100 640 C12 510 106 690 209 580 S340 500 510 565"/>
-      <path class="ml-splash__wave-front" d="M-100 574 C25 450 100 625 200 562 S347 463 510 536"/>
-      <path class="ml-splash__wave-faint" d="M-90 310 C65 165 154 355 252 257 S370 169 510 211"/>
-    </svg>
-    <button class="ml-splash__skip" type="button" id="myledgerSplashSkip" aria-label="跳过启动动画">跳过 <span aria-hidden="true">↗</span></button>
-    <div class="ml-splash__content">
-      <div class="ml-splash__orbit" aria-hidden="true"></div>
-      <div class="ml-splash__logo-wrap">
-        <span class="ml-splash__logo-beam" aria-hidden="true"></span>
-        <img class="ml-splash__logo" src="./icons/icon-192.png" alt="MyLedger" width="112" height="112">
-      </div>
-      <div class="ml-splash__wordmark">MyLedger</div>
-      <div class="ml-splash__tagline">让每一笔支出，都清晰可见</div>
-      <div class="ml-splash__indicator" aria-hidden="true"><span></span><span></span><span></span></div>
-    </div>
-    <div class="ml-splash__footer">PERSONAL FINANCE <span>·</span> SIMPLIFIED</div>
+    <div class="vas-splash__sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <button class="vas-splash__skip" id="vascontaSplashSkip" type="button" aria-label="跳过启动动画">跳过 <span aria-hidden="true">↗</span></button>
   </div>
   <div class="app-shell">
     <header class="app-header">
-      <div class="brand"><img src="./icons/icon-192.png" alt=""><div><strong>MyLedger</strong><small>我的个人记账本</small></div></div>
+      <div class="brand"><img src="./icons/icon-192.png" alt=""><div><strong>VASCONTA</strong><small>瓦斯科的账本</small></div></div>
       <div class="offline-chip" id="connection"><span class="status-dot"></span> 离线可用</div>
       <nav class="desktop-nav" aria-label="桌面主导航">
         <button type="button" data-view="home">⌂ <span>首页概览</span></button>
@@ -61,7 +43,7 @@
     </header>
     <main>
       <section class="view active" id="home" aria-label="首页">
-        <div class="headline"><div><div class="eyebrow">你的财务小账本</div><h1>记好每一笔，<br>生活更清晰。</h1></div><span class="date-chip" id="todayBadge"></span></div>
+        <div class="headline"><div><div class="eyebrow">VASCONTA · 瓦斯科的账本</div><h1>记好每一笔，<br>生活更清晰。</h1></div><span class="date-chip" id="todayBadge"></span></div>
         <div class="hero-card"><div class="hero-label">本周净消费 <span>周一至周日</span></div><div class="hero-amount" id="weekSpend">¥0.00</div><div class="hero-footer"><span id="weekPeriod"></span><span id="weekComparison">本周数据</span></div><span class="hero-shape hero-shape-one"></span><span class="hero-shape hero-shape-two"></span></div>
         <div class="stat-grid"><div class="small-stat"><div class="stat-heading"><span class="stat-icon blue">↗</span> 本月支出</div><strong id="monthSpend">¥0.00</strong><span>不含内部转账</span></div><div class="small-stat"><div class="stat-heading"><span class="stat-icon green">↘</span> 本月收入</div><strong id="monthIncome">¥0.00</strong><span>退款另行抵扣支出</span></div></div>
         <div class="panel"><div class="panel-title"><h2>本周每日净消费</h2><span>单位：元</span></div><div class="bars" id="weekBars"></div></div>
@@ -99,8 +81,8 @@
       <section class="view analytics-view" id="analytics" aria-label="财务分析中心">
         <div class="analytics-head">
           <div class="analytics-head-copy">
-            <div class="analytics-kicker">MYLEDGER / INSIGHTS</div>
-            <div class="analytics-head-title"><h1>财务分析中心</h1><span class="analytics-version">V0.1.5 焕新版</span></div>
+            <div class="analytics-kicker">VASCONTA / INSIGHTS</div>
+            <div class="analytics-head-title"><h1>财务分析中心</h1><span class="analytics-version">V0.1.6 品牌焕新版</span></div>
             <p>看清每一笔支出的去向，也看见生活习惯的变化。</p>
           </div>
           <div class="analytics-aura" aria-hidden="true"></div>
@@ -195,7 +177,7 @@
     </nav>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script defer src="./splash.js?v=0.1.5.1"></script>
+  <script defer src="./splash.js?v=0.1.6"></script>
   <script defer src="./app.js?v=0.1.5"></script>
   <script defer src="./analytics.js?v=0.1.5"></script>
   <script type="module" src="./cloud.js?v=0.1.5"></script>
