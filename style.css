@@ -1,0 +1,132 @@
+:root{color-scheme:light;--navy:#102959;--blue:#1668db;--teal:#15c6ad;--muted:#7b89a3;--ink:#172a4a;--line:#e6edf6;--bg:#f3f7fe;--card:#fff;--r:20px;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei",sans-serif}*{box-sizing:border-box}html{background:var(--bg)}body{margin:0;color:var(--ink);background:radial-gradient(circle at 90% 0%,#e0fbf8 0,#f3f7fe 35%,#f3f7fe 100%);min-height:100vh}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a7cafa;outline-offset:1px}.app-shell{max-width:600px;min-height:100svh;margin:0 auto;padding:env(safe-area-inset-top) 16px calc(92px + env(safe-area-inset-bottom));background:linear-gradient(140deg,rgba(222,245,255,.5),transparent 270px)}.app-header{display:flex;align-items:center;justify-content:space-between;padding:20px 2px 16px}.brand{display:flex;align-items:center;gap:10px}.brand img{width:48px;height:48px;border-radius:13px;box-shadow:0 7px 15px #0c34842b}.brand strong{display:block;font-size:18px;color:var(--navy)}.brand small{display:block;font-size:11px;color:var(--muted);margin-top:2px}.offline-chip{font-size:11px;border:1px solid #bfeee4;background:#e8faf4;color:#137660;border-radius:18px;padding:7px 9px;white-space:nowrap}.status-dot{width:7px;height:7px;border-radius:50%;background:#22bb90;display:inline-block;margin-right:3px}.view{display:none}.view.active{display:block}.headline{display:flex;align-items:flex-end;justify-content:space-between;margin:12px 3px 20px;gap:8px}.eyebrow{color:#4282c2;font-size:12px;font-weight:650;margin:0 0 8px;letter-spacing:.04em}h1,h2,p{margin-top:0}h1{font-size:27px;line-height:1.3;color:var(--navy);letter-spacing:-.4px;margin-bottom:0}.date-chip{background:white;color:#537099;border:1px solid #e3eafb;border-radius:12px;font-size:12px;padding:9px 11px;white-space:nowrap}.hero-card{background:linear-gradient(118deg,#0b3b8b,#1266c5 57%,#129bbb);border-radius:23px;color:white;padding:22px 21px;min-height:155px;overflow:hidden;position:relative;box-shadow:0 12px 22px #0c50ae28}.hero-label{font-size:13px;color:#dceaff;position:relative;z-index:1}.hero-label span{font-size:11px;margin-left:8px;opacity:.75}.hero-amount{font-size:39px;font-weight:750;letter-spacing:-1px;position:relative;z-index:1;margin:7px 0 17px}.hero-footer{display:flex;align-items:center;justify-content:space-between;color:#eaf6ff;font-size:12px;position:relative;z-index:1}.hero-footer span:last-child{background:#ffffff24;border-radius:20px;padding:5px 9px}.hero-shape{position:absolute;border-radius:50%;pointer-events:none}.hero-shape-one{height:190px;width:250px;background:#8effdf1f;top:-83px;right:-90px}.hero-shape-two{height:160px;width:240px;background:#89effb15;bottom:-125px;right:10px}.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}.small-stat{background:#fff;border-radius:19px;box-shadow:0 4px 16px #18458209;border:1px solid #e9f0fa;padding:17px 15px;min-width:0}.stat-heading{display:flex;gap:7px;align-items:center;color:#5d7191;font-size:12px}.stat-icon{display:inline-grid;place-items:center;height:28px;width:28px;border-radius:10px;font-size:16px}.stat-icon.blue{background:#eaf2ff;color:#0a66e6}.stat-icon.green{background:#dffaf2;color:#0d9b82}.small-stat strong{display:block;font-size:22px;letter-spacing:-.6px;margin:9px 0 5px;white-space:nowrap}.small-stat>span{font-size:11px;color:#9ba8bc}.panel{background:var(--card);border:1px solid #e9eef8;border-radius:var(--r);box-shadow:0 5px 22px #15396b0c;margin-top:14px;padding:19px 17px}.panel-title{display:flex;align-items:center;justify-content:space-between;gap:10px}.panel-title h2,.panel h2{font-size:15px;color:var(--navy);margin:0 0 10px}.panel-title span{color:var(--muted);font-size:11px}.bars{display:grid;grid-template-columns:repeat(7,1fr);align-items:end;gap:8px;height:165px;margin-top:7px}.bar-group{height:100%;display:flex;align-items:center;justify-content:flex-end;flex-direction:column;gap:9px}.bar-track{height:124px;width:100%;display:flex;align-items:flex-end;justify-content:center}.bar-col{width:60%;min-height:3px;border-radius:6px 6px 2px 2px;background:linear-gradient(180deg,#39cbcf,#1577e9);max-width:28px;transition:height .2s ease}.bar-group:nth-child(7) .bar-col{background:linear-gradient(180deg,#68e6cb,#16b79b)}.bar-text{font-size:11px;color:#7889a4}.breakdown{display:grid;gap:11px;margin-top:5px}.category-row{display:grid;grid-template-columns:68px 1fr auto;align-items:center;gap:10px;font-size:12px}.category-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.category-bar{height:8px;background:#edf2fa;border-radius:8px;overflow:hidden}.category-bar span{display:block;height:100%;border-radius:8px}.category-money{font-weight:600;font-variant-numeric:tabular-nums}.empty-state{padding:28px 0;text-align:center;color:#98a5b9;font-size:12px}.tips{font-size:12px;line-height:1.7;color:#537497;border-color:#d6e5f9;background:#f8fbff}.page-heading{margin:12px 4px 18px}.page-heading h1{font-size:26px}.page-heading p{color:#8b9bb2;margin:9px 0 0;font-size:12px;line-height:1.7}.entry-form{padding:18px 16px}.type-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;background:#edf3fc;padding:5px;border-radius:14px;margin-bottom:23px}.type-tab{border:0;background:transparent;color:#6b7e9f;padding:12px 5px;border-radius:11px;font-size:13px}.type-tab.selected{background:#fff;color:#1263cb;font-weight:750;box-shadow:0 2px 8px #142d6220}.field{font-size:12px;font-weight:650;color:#516381;display:block;margin:12px 0}.field input,.field select,.field textarea{display:block;width:100%;margin-top:9px;border:1px solid #dce4ef;border-radius:12px;background:#fff;padding:13px 12px;color:#162849;font-size:15px;min-height:46px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:#3e87e5;box-shadow:0 0 0 3px #dbebff}.amount-input{display:flex;align-items:center;border:1px solid #bed4f5;background:#f7fbff;border-radius:14px;padding-left:14px;margin-top:9px}.amount-input span{font-weight:750;color:#1b5cad;font-size:22px}.amount-input input{margin:0;border:0;background:transparent;box-shadow:none!important;font-size:27px;font-weight:750;padding:11px 13px;min-width:0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field textarea{resize:vertical;line-height:1.5;min-height:87px}.form-actions{display:flex;gap:10px;margin-top:19px}.primary-btn{border:0;background:linear-gradient(105deg,#166cdf,#18a2d2 65%,#13c6b5);border-radius:12px;padding:14px;color:#fff;font-weight:750;box-shadow:0 7px 13px #1263c126;display:inline-flex;align-items:center;justify-content:center;flex:1}.soft-btn{border:1px solid #d5dfed;border-radius:12px;background:#eef3f9;color:#45617f;padding:13px 16px;font-weight:650;flex-shrink:0}.soft-btn.full{width:100%}.filters{display:grid;grid-template-columns:1fr 1fr;gap:12px}.summary-row{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:5px 0 15px;font-size:12px;color:#7b8ca5}.summary-row strong{color:#144377}.history-list{margin-top:6px}.txn{display:flex;align-items:center;gap:11px;padding:13px 0;border-bottom:1px solid #eef2f7}.txn:last-child{border:0}.txn-icon{width:39px;height:39px;border-radius:13px;display:grid;place-items:center;background:#eef5ff;color:#166cdf;font-size:17px;flex:none}.txn-icon.income{background:#e2fbf1;color:#0a9e79}.txn-icon.refund{background:#fff3e2;color:#e38c17}.txn-icon.transfer{background:#f4eeff;color:#8861c1}.txn-main{flex:1;min-width:0}.txn-main strong{font-size:13px;font-weight:650;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.txn-main small{color:#9aa6b9;font-size:11px;display:block;margin-top:5px}.txn-amount{font-weight:700;font-size:14px;white-space:nowrap}.txn-amount.income,.txn-amount.refund{color:#10a389}.txn-actions{display:flex;gap:3px;margin-top:5px;justify-content:flex-end}.txn-actions button{border:0;background:transparent;color:#7990b1;font-size:11px;padding:2px 5px}.txn-actions button.delete{color:#c7757a}.file-btn{display:flex;margin-top:15px;align-items:center;justify-content:center;background:#eaf3ff;border:1px dashed #79b2f4;border-radius:12px;padding:13px;color:#1163ce;font-weight:700;font-size:13px;cursor:pointer}.file-btn.secondary{background:#f3f7fd;border-color:#c9d7eb;color:#42668a}.panel p{color:#7f91a9;font-size:12px;line-height:1.8;margin:7px 0 0}.panel>button{width:100%;margin-top:14px}.fine-print{font-size:11px!important}.backup-foot{font-size:11px;color:#8b9db6;margin-top:12px}.notice{background:#fffbf2;border-color:#f5dfac}.notice strong{font-size:13px;color:#92622a}.import-preview{margin-top:12px;border:1px solid #daebfa;padding:13px;background:#f7fbff;border-radius:12px;font-size:12px;line-height:1.7}.import-preview button{margin-top:10px}.hidden{display:none!important}.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,600px);background:#fffffff5;backdrop-filter:blur(16px);border-top:1px solid #e8eef7;display:flex;justify-content:space-around;padding:9px 10px calc(8px + env(safe-area-inset-bottom));z-index:9;box-shadow:0 -8px 18px #14457a0b}.bottom-nav button{display:flex;flex:1;flex-direction:column;gap:4px;align-items:center;justify-content:center;border:0;background:transparent;color:#92a0b5;font-size:10px;padding:4px 0}.bottom-nav button.active{color:#146ce5;font-weight:700}.bottom-nav svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.toast{position:fixed;z-index:10;bottom:calc(88px + env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);background:#20385c;color:#fff;padding:11px 15px;border-radius:13px;font-size:12px;box-shadow:0 12px 28px #14325936;max-width:90vw;text-align:center;opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}@media(min-width:620px){.app-shell{border-left:1px solid #e2eaf6;border-right:1px solid #e2eaf6}.bottom-nav{border-radius:16px 16px 0 0}}@media(max-width:380px){.small-stat strong{font-size:18px}.date-chip{display:none}.hero-amount{font-size:35px}.app-shell{padding-left:12px;padding-right:12px}.panel{padding:16px 13px}}
+
+
+/* MyLedger Mobile V0.1.1: iPhone date/category overlap fix.
+   On narrow screens native iOS date inputs have an intrinsic width; putting
+   date and category in separate rows prevents one control covering the other. */
+.form-grid > .field,
+.filters > .field { min-width: 0; }
+.form-grid input,
+.form-grid select,
+.filters select { min-width: 0; max-width: 100%; }
+@media (max-width: 560px) {
+  .form-grid { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .form-grid > .field { width: 100%; margin: 10px 0; }
+  .form-grid input[type="date"] { width: 100%; min-width: 0; }
+}
+
+
+/* MyLedger Mobile V0.1.2: iPhone Safari native date control overflow fix.
+   Keep the visible border on the constrained wrapper, not the native input.
+   WebKit may impose an intrinsic width on input[type=date], so clip it safely
+   inside the same box width as category, payment and notes fields. */
+#entryForm .form-grid { width: 100%; max-width: 100%; min-width: 0; }
+#entryForm .form-grid > .field { min-width: 0; max-width: 100%; width: 100%; box-sizing: border-box; }
+#entryForm .date-field .date-control {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 9px;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 51px;
+  border: 1px solid #dce4ef;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+#entryForm .date-field .date-control input[type="date"] {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 0 12px;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #162849;
+  font-size: 16px;
+  box-shadow: none;
+  outline: none;
+  text-align: left;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#entryForm .date-field .date-control input[type="date"]:focus {
+  outline: none;
+  border: 0;
+  box-shadow: none;
+}
+#entryForm .date-field .date-control:focus-within {
+  border-color: #3e87e5;
+  box-shadow: 0 0 0 3px #dbebff;
+}
+#entryForm input[type="date"]::-webkit-date-and-time-value {
+  text-align: left;
+  min-width: 0;
+}
+#entryForm input[type="date"]::-webkit-datetime-edit { padding: 0; }
+
+/* MyLedger Mobile V0.1.3 — redesigned date field, native iOS picker preserved.
+   Only a transparent hit area belongs to WebKit; visible date text is a flex item.
+   Never hide or disable input; Safari still needs it to receive the tap. */
+#entryForm .date-field .date-control {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  height: 51px;
+  min-height: 51px;
+  padding: 0 12px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+#entryForm .date-field .date-display {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.25;
+  color: #162849;
+  font-size: 15px;
+  font-weight: 500;
+  pointer-events: none;
+}
+#entryForm .date-field .date-calendar {
+  display: block;
+  flex: 0 0 19px;
+  width: 19px;
+  height: 19px;
+  color: #7893b6;
+  pointer-events: none;
+}
+#entryForm .date-field .date-control input[type="date"] {
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  opacity: 0;
+  color: transparent;
+  cursor: pointer;
+  -webkit-appearance: auto;
+  appearance: auto;
+}
+#entryForm .date-field .date-control:focus-within {
+  border-color: #3e87e5;
+  box-shadow: 0 0 0 3px #dbebff;
+}
