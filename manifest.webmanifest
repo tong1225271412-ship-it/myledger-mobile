@@ -1,7 +1,7 @@
 {
   "name": "MyLedger · 个人记账本",
   "short_name": "MyLedger",
-  "description": "离线优先的个人记账本，支持与 Windows 版交换账目",
+  "description": "离线优先的个人记账本，支持 Firebase 云同步和本地账单备份",
   "id": "./",
   "start_url": "./",
   "scope": "./",
